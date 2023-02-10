@@ -1,4 +1,3 @@
-#Web API
 
 This is a simple ASP.NET Core WEB API which using Windows functions.
 Using this API you can shutdown or reboot your computer, kill users processes, call lock screen from timer or to get list of users processes.
