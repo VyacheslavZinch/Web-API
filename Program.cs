@@ -59,15 +59,15 @@ app.MapGet("/killprocess/{processname}", (string processname) =>
             worker.Dispose();
         }
         GC.Collect();
-        return Results.Json($"Процесс {processname} завершён.");
+        return Results.Json($"Process {processname} was finished.");
     }
     catch(ArgumentException)
     {
-        return Results.Json("Процесс не был завершён. Вы ввели некорректное значение. Попробуйте ещё раз.");
+        return Results.Json("Process was not finished. Please set another timer");
     }
     catch (NullReferenceException)
     {
-        return Results.Json("Процесс не найден. Попробуйте ещё раз.");
+        return Results.Json("Process was not found.");
     }
 
 });
